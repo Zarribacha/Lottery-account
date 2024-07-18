@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Win Lottery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            position: relative;
+        }
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+            z-index: -1;
+        }
+        .content {
+            display: none;
+            margin-top: 50px;
+        }
+        .visible {
+            display: block;
+        }
+        .qr-code {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    <script>
+        function toggleDetails() {
+            var details = document.getElementById('details');
+            if (details.classList.contains('visible')) {
+                details.classList.remove('visible');
+            } else {
+                details.classList.add('visible');
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="https://s10.gifyu.com/images/SfQkx.png" class="watermark" alt="Lucky Win">
+    <h1>Welcome to Lucky Win Lottery</h1>
+    <a href="#" onclick="toggleDetails()">Click here to show account details</a>
+    <div id="details" class="content">
+        <p>Account Till ID: 980342992</p>
+        <img src="https://s12.gifyu.com/images/St1jM.jpg" alt="QR Code" class="qr-code">
+        <p>Please make the deposit to enter to Lucky Win Lottery</p>
+    </div>
+</body>
+</html>
